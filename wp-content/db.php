@@ -1,0 +1,1 @@
+/Users/rupesh/Herd/wordpress/wp-content/plugins/query-monitor/wp-content/db.php

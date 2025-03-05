@@ -1,0 +1,187 @@
+/* ------------------- Custom Cart Page Styles ------------------- */
+
+.cart-container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 50px 0;
+    background: #f8f9fa;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Cart Title */
+.cart-title {
+    text-align: center;
+    font-size: 25px;
+    color: #333;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+/* Cart Content Wrapper */
+.cart-content {
+    width: 90%;
+    max-width: 1200px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* WooCommerce Cart Table */
+.woocommerce-cart-form {
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Table Styling */
+.woocommerce table.shop_table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}
+
+.woocommerce table.shop_table th {
+    background: white;
+    font-size: 16px;
+    text-align: left;
+    padding: 12px;
+}
+
+.woocommerce table.shop_table td {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Product Image in Cart */
+.woocommerce-cart-form__cart-item img {
+    width: 60px;
+    height: auto;
+    border-radius: 6px;
+}
+
+/* Product Name Styling */
+.woocommerce table.shop_table td.product-name {
+    font-size: 18px;
+    font-weight: 500;
+    color: #333;
+}
+
+/* Quantity Input */
+.woocommerce table.shop_table td.product-quantity input {
+    width: 60px;
+    padding: 8px;
+    font-size: 16px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: #f9f9f9;
+}
+
+/* Update Cart & Apply Coupon Buttons */
+.woocommerce button.button {
+    background: black;
+    color: #fff;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.woocommerce button.button:hover {
+    background: #333;
+}
+
+/* Cart Totals Section */
+.cart_totals {
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+}
+
+.cart_totals h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Proceed to Checkout Button */
+.woocommerce a.checkout-button {
+    display: block;
+    background: #6a0dad;
+    color: #fff;
+    text-align: center;
+    padding: 14px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+}
+
+.woocommerce a.checkout-button:hover {
+    background: #520d9b;
+}
+
+/* Responsive Fixes */
+@media (max-width: 1024px) {
+    .cart-content {
+        width: 95%;
+        padding: 30px;
+    }
+
+    .cart-title {
+        font-size: 32px;
+    }
+
+    .woocommerce table.shop_table td,
+    .woocommerce table.shop_table th {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .cart-content {
+        width: 98%;
+        padding: 20px;
+    }
+
+    .cart-title {
+        font-size: 28px;
+    }
+
+    .woocommerce table.shop_table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .woocommerce button.button,
+    .woocommerce a.checkout-button {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cart-title {
+        font-size: 24px;
+    }
+
+    .woocommerce button.button,
+    .woocommerce a.checkout-button {
+        font-size: 16px;
+        padding: 12px;
+    }
+}
