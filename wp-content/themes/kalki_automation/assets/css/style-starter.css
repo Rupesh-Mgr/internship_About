@@ -2608,3 +2608,303 @@ body {
 .continue-shopping-button:hover {
     background-color: #e55e00;
 }
+
+
+/* Archive Page Styling */
+.archive-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f9; /* Light background for better contrast */
+}
+
+.archive-page-title {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.archive-page-title span {
+  font-weight: 600;
+}
+
+.archive-service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.archive-service-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.archive-service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.archive-service-card a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  padding: 20px;
+}
+
+.archive-service-image img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.archive-service-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.archive-service-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.archive-service-text {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.archive-icon-container {
+  text-align: center;
+}
+
+.archive-icon-title i {
+  font-size: 30px;
+  color: #007BFF;
+  margin-right: 8px;
+}
+
+.archive-icon-title a {
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.archive-icon-title a:hover {
+  color: #007BFF;
+}
+
+.archive-icon-excerpt {
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+.archive-pagination {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.archive-pagination .page-numbers {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #007BFF;
+  transition: background 0.3s ease;
+}
+
+.archive-pagination .page-numbers.current,
+.archive-pagination .page-numbers:hover {
+  background: #007BFF;
+  color: #ffffff;
+  border-color: #007BFF;
+}
+
+.archive-no-services {
+  text-align: center;
+  font-size: 18px;
+  color: #888;
+  margin-top: 20px;
+}
+
+/* Back to Home Button */
+.back-to-home-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.back-to-home-button {
+  display: inline-block;
+  background-color: #007BFF;
+  color: white;
+  padding: 12px 25px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.back-to-home-button:hover {
+  background-color: #005bb5;
+}
+
+@media (max-width: 768px) {
+  .archive-page-title {
+    font-size: 28px;
+  }
+
+  .archive-service-card {
+    margin: 10px;
+  }
+
+  .archive-service-title {
+    font-size: 20px;
+  }
+
+  .archive-service-text {
+    font-size: 14px;
+  }
+
+  .back-to-home-button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}
+
+
+/* featuredprojects singlepost css */
+.slider-single-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the content horizontally */
+  justify-content: center; /* Vertically centers content if needed */
+}
+
+.slider-single-post {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%; /* Ensures post content takes up full width of the container */
+  max-width: 1000px; /* Optional: you can limit the max width of the post */
+}
+
+.slider-header {
+  margin-bottom: 20px;
+  text-align: center; /* Centers the header content */
+}
+
+.post-slider-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.post-date {
+  font-size: 14px;
+  color: #888;
+  font-style: italic;
+  text-align: center; /* Centers the date text */
+}
+
+.slider-images {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.slider-images img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slider-content {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 30px;
+  text-align: center; /* Centers the content text */
+}
+
+.slider-content p {
+  margin-bottom: 15px;
+}
+
+.back-button {
+  display: flex;
+  background-color: #0073e6;
+  justify-content: center;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+  align-self: center; /* Ensures the back button is centered */
+}
+
+.back-button:hover {
+  background-color: #005bb5;
+}
+
+/* Add responsiveness */
+@media (max-width: 768px) {
+  .slider-single-container {
+      padding: 15px;
+  }
+
+  .slider-header {
+      text-align: left;
+  }
+
+  .post-slider-title {
+      font-size: 28px;
+  }
+
+  .slider-images img {
+      max-width: 100%;
+      height: auto;
+  }
+
+  .slider-content {
+      font-size: 14px;
+  }
+
+  .back-button {
+      padding: 10px 20px;
+  }
+}
+
+/* Add a hover effect for the post header */
+.slider-header:hover .post-slider-title {
+  color: #0073e6;
+  text-decoration: underline;
+}

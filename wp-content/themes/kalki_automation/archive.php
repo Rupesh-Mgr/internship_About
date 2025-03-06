@@ -8,10 +8,14 @@
             echo '<span style="color: black;">' . esc_html(ucfirst($title_parts[0])) . '</span> ';
             echo '<span style="color: #007BFF;">' . esc_html(ucfirst($title_parts[1])) . '</span>';
         } else {
-            echo esc_html(ucfirst($title));
+           
         }
         ?>
     </h1>
+
+    <!-- Back to Home Button -->
+    <div class="back-to-home-container">
+    </div>
 
     <?php
     $paged = get_query_var('paged') ?: 1;
@@ -57,6 +61,8 @@
                 </div>
             <?php endwhile; ?>
         </div>
+        <a href="<?php echo home_url(); ?>" class="back-to-home-button">Back to Home</a>
+
 
         <div class="archive-pagination">
             <?php echo paginate_links(['total' => $query->max_num_pages]); ?>

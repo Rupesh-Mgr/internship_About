@@ -12,34 +12,10 @@ get_header();
     </div>
     <div class="continue-shopping">
         <a href="<?php echo get_permalink(get_page_by_path('projects')); ?>" class="continue-shopping-button">
-            Continue Shopping
+            Continue to the Shopping
         </a>
     </div>
 </div>
 
 <?php get_footer(); ?>
 
-<style>
-.cart-container {
-    text-align: center;
-    padding: 20px;
-}
-
-.continue-shopping {
-    margin-top: 20px;
-}
-
-.continue-shopping-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #ff6600;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-.continue-shopping-button:hover {
-    background-color: #e55e00;
-}
-</style>

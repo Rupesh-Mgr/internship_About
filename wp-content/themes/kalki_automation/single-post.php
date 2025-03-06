@@ -39,6 +39,29 @@ if (has_category('Our service')) : ?>
         <!--End of the service  -->
 
 
+       <?php elseif(has_category('slider')):?>
+        <div class="slider-single-container <?php echo esc_attr($category_slug)?>">
+            <article class="slider-single-post slider-layout">
+                <div class="slider-header">
+                    <h1 class="post-slider-title"><?php the_title();?></h1>
+                    <p class="post-date"><?php echo get_the_date('F j, Y'); ?></p>
+                </div>
+                 <?php if(has_post_thumbnail()):?>
+                    <div class="slider-images">
+                        <?php the_post_thumbnail('large');?>
+                    </div>
+                    <?php endif;?>
+
+                    <div class="slider-content">
+                        <?php the_content();?>
+                    </div>
+                    <a href="<?php echo esc_url(get_category_link(get_cat_ID('slider')));?>"class="back-button">← Back to Featured projects</a>
+            </article>
+        </div>
+
+     
+
+
      <!-- recent-posts single posts section -->
       <?php elseif(has_category('recent')):?>
         <div class="recent-single-container <?php echo esc_attr($category_slug)?>">
@@ -192,6 +215,8 @@ if (has_category('Our service')) : ?>
         </article>
 </div>
          <?php else:?>
+
+
 
 
 
