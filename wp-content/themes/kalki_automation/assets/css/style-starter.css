@@ -16,7 +16,7 @@
   padding: 40px 0;
   width: 100%;
   box-sizing: border-box;
-  margin-top: 0;
+  margin-top: -4px;
 }
 
 /* Navbar Head */
@@ -2907,4 +2907,349 @@ body {
 .slider-header:hover .post-slider-title {
   color: #0073e6;
   text-decoration: underline;
+}
+
+
+
+
+
+/* My Account Page Container */
+.woocommerce-account-title {
+  margin-top: 10px;
+  padding: 20px 0px;
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.woocommerce-account-container {
+  max-width: 1000px;
+  margin: 20px auto;
+  display: flex;
+  gap: 30px;
+  padding: 20px;
+}
+
+/* Sidebar Navigation */
+.woocommerce-account-sidebar {
+  width: 250px;
+  background: #f8f8f8;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.woocommerce-account-sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.woocommerce-account-sidebar ul li {
+  margin-bottom: 15px;
+}
+
+.woocommerce-account-sidebar ul li a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 15px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.woocommerce-account-sidebar ul li.active a,
+.woocommerce-account-sidebar ul li a:hover {
+  background: #6c63ff;
+  color: #fff;
+}
+
+/* Dashicons */
+.woocommerce-account-sidebar ul li a i {
+  font-size: 18px;
+}
+
+/* Main Content Section */
+.woocommerce-account-content {
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f0f0f0;
+}
+
+/* Account Details Form */
+.woocommerce-EditAccountForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.woocommerce-EditAccountForm .woocommerce-form-row {
+  display: flex;
+  flex-direction: column;
+}
+
+.woocommerce-EditAccountForm label {
+  gap: 10px;
+  font-weight: bold;
+  color: #333;
+  font-size: 16px;
+}
+
+.woocommerce-EditAccountForm input {
+  width: 60%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: border 0.3s ease;
+}
+
+.woocommerce-EditAccountForm input:focus {
+  border-color: #6c63ff;
+  outline: none;
+  box-shadow: 0 0 10px rgba(108, 99, 255, 0.3);
+}
+
+/* Submit Button */
+.woocommerce-EditAccountForm button {
+  background: #6c63ff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.woocommerce-EditAccountForm button:hover {
+  background: #4f49d1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .woocommerce-account-container {
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .woocommerce-account-sidebar {
+    width: 100%;
+    text-align: center;
+  }
+
+  .woocommerce-account-sidebar ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .woocommerce-account-sidebar ul li {
+    flex: 1;
+  }
+
+  .woocommerce-account-sidebar ul li a {
+    justify-content: center;
+  }
+
+  .woocommerce-account-content {
+    padding: 15px;
+  }
+}
+/* Orders Table Styling */
+.woocommerce-orders-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.woocommerce-orders-table th,
+.woocommerce-orders-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.woocommerce-orders-table th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.woocommerce-orders-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Order Links */
+.woocommerce-orders-table a {
+  color: #0073aa;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.woocommerce-orders-table a:hover {
+  text-decoration: underline;
+  color: #005177;
+}
+
+/* Status Styling */
+.woocommerce-orders-table .order-status {
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* Different Status Colors */
+.woocommerce-orders-table .status-completed {
+  color: #155724;
+  background-color: #d4edda;
+}
+
+.woocommerce-orders-table .status-processing {
+  color: #856404;
+  background-color: #fff3cd;
+}
+
+.woocommerce-orders-table .status-cancelled {
+  color: #721c24;
+  background-color: #f8d7da;
+}
+
+/* Action Links */
+.woocommerce-orders-table .order-actions a {
+  color: #6f42c1;
+  font-weight: bold;
+}
+
+.woocommerce-orders-table .order-actions a:hover {
+  color: #4a2c8c;
+}
+
+
+
+
+
+/* --- Container for Login & Register Forms --- */
+.woocommerce-login-register {
+  width: 100%;
+  max-width: 400px; /* Adjust width as needed */
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  text-align: left;
+  margin: 0 auto; /* Center the container */
+}
+
+/* --- Common Styles for Both Login and Register Sections --- */
+.login-section,
+.register-section {
+  text-align: left;
+}
+
+/* Section Headings */
+.login-section h2,
+.register-section h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #222;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* --- Form Field Styling --- */
+.woocommerce-form input {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 6px;
+  transition: border 0.3s ease-in-out;
+}
+
+/* Input Focus Effect */
+.woocommerce-form input:focus {
+  border-color: #007c89;
+  outline: none;
+  box-shadow: 0 0 6px rgba(0, 124, 137, 0.3);
+}
+
+/* --- For Password Fields with Optional Show Icon --- */
+.woocommerce-form-row {
+  position: relative;
+}
+
+.woocommerce-form-row input[type="password"] {
+  padding-right: 40px; /* Space for an icon if needed */
+}
+
+.woocommerce-form-row .show-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #007c89;
+}
+
+/* --- Checkbox Styling (e.g., Keep Me Logged In) --- */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 0 20px;
+  font-size: 14px;
+  color: #333;
+}
+
+/* --- Button Styling --- */
+.woocommerce-form button {
+  width: 100%;
+  padding: 14px;
+  background: #007c89;
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.woocommerce-form button:hover {
+  background: #005f66;
+  transform: scale(1.02);
+}
+
+/* --- Additional Links (e.g., Forgot Password, Register Here) --- */
+.woocommerce-login-register p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.woocommerce-login-register a {
+  color: #007c89;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.woocommerce-login-register a:hover {
+  text-decoration: underline;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  .woocommerce-login-register {
+      max-width: 90%;
+      padding: 30px;
+  }
 }

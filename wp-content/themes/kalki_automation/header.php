@@ -21,7 +21,7 @@
 <?php endif; ?>
 
 <!-- Sticky Navbar After Banner -->
-<div class="NavBar sticky-nav">
+<div  id="NavBar" class="NavBar sticky-nav">
     <div class="NavBar-head"></div>
     <div>
         <?php
@@ -33,6 +33,18 @@
         ?>
     </div>
 </div>
+<script>
+            var prevScrollpos = window.pageYOffset;
+            window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            if (prevScrollpos > currentScrollPos) {
+                document.getElementById("NavBar").style.top = "0";
+            } else {
+                document.getElementById("NavBar").style.top = "-100px";
+            }
+            prevScrollpos = currentScrollPos;
+            }
+        </script>
 
    
     

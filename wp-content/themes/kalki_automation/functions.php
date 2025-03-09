@@ -472,4 +472,179 @@ function custom_cart_styles() {
 }
 add_action('wp_enqueue_scripts', 'custom_cart_styles');
 
-?>
+
+function redirect_guest_users_on_add_to_cart() {
+    if (!is_user_logged_in()) {
+        wp_redirect(wc_get_page_permalink('myaccount'));
+        exit;
+    }
+}
+add_action('woocommerce_add_to_cart', 'redirect_guest_users_on_add_to_cart', 1);
+
+
+
+// Custom redirect after login
+// Save the current page URL before login
+function save_redirect_url_before_login() {
+    if (!is_user_logged_in()) {
+        // Save the current URL to the session
+        $_SESSION['redirect_to_after_login'] = $_SERVER['REQUEST_URI'];
+    }
+}
+add_action('template_redirect', 'save_redirect_url_before_login');
+
+
+// Custom redirect after login
+function custom_redirect_after_login($redirect, $user) {
+    // Check if the user is an administrator
+    if (in_array('administrator', (array) $user->roles)) {
+        return admin_url(); // Redirect admin users to the dashboard
+    }
+
+    // Check if there's a redirect URL saved in the session
+    if (!empty($_SESSION['redirect_to_after_login'])) {
+        $redirect = $_SESSION['redirect_to_after_login'];
+        unset($_SESSION['redirect_to_after_login']); // Clear session variable after use
+    } else {
+        // Default to the account dashboard if no redirect URL is saved
+        $redirect = wc_get_account_endpoint_url('dashboard');
+    }
+
+    return $redirect;
+}
+add_filter('woocommerce_login_redirect', 'custom_redirect_after_login', 10, 2);
+
+// Custom WooCommerce register handler
+function custom_woocommerce_register_handler() {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['register'])) {
+        // Verify WooCommerce nonce
+        if (!isset($_POST['woocommerce-register-nonce']) || !wp_verify_nonce($_POST['woocommerce-register-nonce'], 'woocommerce-register')) {
+            wc_add_notice(__('Security check failed. Please try again.', 'woocommerce'), 'error');
+            return;
+        }
+
+        // Get and sanitize form inputs
+        $username = sanitize_user($_POST['user_login']);
+        $email = sanitize_email($_POST['user_email']);
+        $password = $_POST['password'];
+
+        // Validate fields
+        if (empty($username) || empty($email) || empty($password)) {
+            wc_add_notice(__('All fields are required.', 'woocommerce'), 'error');
+            return;
+        }
+
+        if (username_exists($username) || email_exists($email)) {
+            wc_add_notice(__('Username or email already exists.', 'woocommerce'), 'error');
+            return;
+        }
+
+        // Register user
+        $user_id = wp_create_user($username, $password, $email);
+
+        if (!is_wp_error($user_id)) {
+            // Set customer role
+            $user = new WP_User($user_id);
+            $user->set_role('customer');
+
+            // Log the user in
+            $creds = [
+                'user_login'    => $username,
+                'user_password' => $password,
+                'remember'      => true
+            ];
+            $user_signon = wp_signon($creds, false);
+
+            if (!is_wp_error($user_signon)) {
+                wp_set_current_user($user_signon->ID);
+                wp_set_auth_cookie($user_signon->ID);
+                do_action('wp_login', $user_signon->user_login, $user_signon);
+
+                // Redirect to My Account
+                wp_safe_redirect(wc_get_page_permalink('myaccount'));
+                exit;
+            } else {
+                wc_add_notice($user_signon->get_error_message(), 'error');
+            }
+        } else {
+            wc_add_notice($user_id->get_error_message(), 'error');
+        }
+    }
+}
+add_action('template_redirect', 'custom_woocommerce_register_handler');
+
+
+// Add a popup notification based on user role (admin or customer)
+function custom_welcome_popup_notification() {
+    if (is_user_logged_in()) {
+        $user = wp_get_current_user();
+        // Check if the user is an Admin or Customer
+        $role = (in_array('administrator', (array) $user->roles)) ? 'admin' : 'customer';
+
+        // Output the script to show the welcome message
+        ?>
+        <script type="text/javascript">
+            document.addEventListener('DOMContentLoaded', function() {
+                // You can add custom messages here based on the role
+                var userRole = '<?php echo $role; ?>';
+                var message = '';
+
+                if (userRole === 'admin') {
+                    message = 'Welcome, Admin! You have full access to the dashboard.';
+                } else if (userRole === 'customer') {
+                    message = 'Welcome, valued customer! Enjoy shopping with us!';
+                }
+
+                // Create the popup notification
+                var popup = document.createElement('div');
+                popup.classList.add('popup-notification');
+                popup.innerHTML = '<div class="popup-content"><span class="popup-close">&times;</span><p>' + message + '</p></div>';
+                document.body.appendChild(popup);
+
+                // Close the popup when the close button is clicked
+                var closeButton = popup.querySelector('.popup-close');
+                closeButton.addEventListener('click', function() {
+                    popup.remove();
+                });
+
+                // Automatically close the popup after 5 seconds
+                setTimeout(function() {
+                    popup.remove();
+                }, 5000);
+            });
+        </script>
+        <style>
+            /* Styles for the popup notification */
+            .popup-notification {
+                position: fixed;
+                top: 20px;
+                right: 20px;
+                background-color: #f1f1f1;
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                z-index: 9999;
+                width: 300px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-family: Arial, sans-serif;
+            }
+            .popup-content p {
+                margin: 0;
+                font-size: 14px;
+                color: #333;
+            }
+            .popup-close {
+                cursor: pointer;
+                font-size: 20px;
+                color: #333;
+                background: none;
+                border: none;
+                font-weight: bold;
+            }
+        </style>
+        <?php
+    }
+}
+add_action('wp_footer', 'custom_welcome_popup_notification');
