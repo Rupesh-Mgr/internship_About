@@ -583,6 +583,7 @@ function custom_welcome_popup_notification() {
 
         // Output the script to show the welcome message
         ?>
+        
         <script type="text/javascript">
             document.addEventListener('DOMContentLoaded', function() {
                 // You can add custom messages here based on the role

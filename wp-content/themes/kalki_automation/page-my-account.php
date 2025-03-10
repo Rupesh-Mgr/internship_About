@@ -60,11 +60,11 @@ get_header(); ?>
                         </p>
 
                         <p class="woocommerce-form-row form-row">
-    <input type="hidden" name="redirect" value="<?php echo esc_url(admin_url()); ?>" />
-    <button type="submit" class="woocommerce-button button woocommerce-form-login__submit" name="login">
-        <?php esc_html_e('Login', 'woocommerce'); ?>
-    </button>
-</p>
+                            <input type="hidden" name="redirect" value="<?php echo esc_url(admin_url()); ?>" />
+                            <button type="submit" class="woocommerce-button button woocommerce-form-login__submit" name="login">
+                                <?php esc_html_e('Login', 'woocommerce'); ?>
+                            </button>
+                        </p>
 
 
                         <?php do_action('woocommerce_login_form_end'); ?>
