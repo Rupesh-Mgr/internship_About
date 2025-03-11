@@ -10654,3 +10654,41 @@ Stack trace:
 [10-Mar-2025 09:18:49 UTC] PHP Warning:  Attempt to read property "title" on null in /Users/rupesh/Herd/wordpress/wp-includes/class-wp-customize-widgets.php on line 923
 [10-Mar-2025 09:43:52 UTC] PHP Warning:  Attempt to read property "title" on null in /Users/rupesh/Herd/wordpress/wp-includes/class-wp-customize-widgets.php on line 923
 [10-Mar-2025 09:44:56 UTC] PHP Warning:  Attempt to read property "title" on null in /Users/rupesh/Herd/wordpress/wp-includes/class-wp-customize-widgets.php on line 923
+[11-Mar-2025 04:49:18 UTC] Automatic updates starting...
+[11-Mar-2025 04:49:19 UTC]   Automatic plugin updates starting...
+[11-Mar-2025 04:49:19 UTC]   Automatic plugin updates complete.
+[11-Mar-2025 04:49:21 UTC]   Automatic theme updates starting...
+[11-Mar-2025 04:49:21 UTC]   Automatic theme updates complete.
+[11-Mar-2025 04:49:21 UTC] Automatic updates complete.
+[11-Mar-2025 05:38:14 UTC] PHP Warning:  exif_read_data(banner.jpg): Incorrect APP1 Exif Identifier Code in /Users/rupesh/Herd/wordpress/wp-admin/includes/image.php on line 954
+[11-Mar-2025 05:38:14 UTC] PHP Warning:  exif_read_data(banner.jpg): Incorrect APP1 Exif Identifier Code in /Users/rupesh/Herd/wordpress/wp-admin/includes/image.php on line 954
+[11-Mar-2025 05:59:03 UTC] PHP Warning:  Attempt to read property "title" on null in /Users/rupesh/Herd/wordpress/wp-includes/class-wp-customize-widgets.php on line 923
+[11-Mar-2025 05:59:41 UTC] PHP Warning:  Attempt to read property "title" on null in /Users/rupesh/Herd/wordpress/wp-includes/class-wp-customize-widgets.php on line 923
+[11-Mar-2025 06:00:07 UTC] PHP Warning:  Attempt to read property "title" on null in /Users/rupesh/Herd/wordpress/wp-includes/class-wp-customize-widgets.php on line 923
+[11-Mar-2025 06:00:26 UTC] PHP Warning:  Attempt to read property "title" on null in /Users/rupesh/Herd/wordpress/wp-includes/class-wp-customize-widgets.php on line 923
+[11-Mar-2025 06:00:28 UTC] PHP Warning:  Attempt to read property "title" on null in /Users/rupesh/Herd/wordpress/wp-includes/class-wp-customize-widgets.php on line 923
+[11-Mar-2025 06:00:30 UTC] PHP Warning:  Attempt to read property "title" on null in /Users/rupesh/Herd/wordpress/wp-includes/class-wp-customize-widgets.php on line 923
+[11-Mar-2025 06:14:10 UTC] PHP Warning:  Attempt to read property "title" on null in /Users/rupesh/Herd/wordpress/wp-includes/class-wp-customize-widgets.php on line 923
+[11-Mar-2025 06:14:15 UTC] PHP Warning:  Attempt to read property "title" on null in /Users/rupesh/Herd/wordpress/wp-includes/class-wp-customize-widgets.php on line 923
+[11-Mar-2025 06:14:41 UTC] PHP Warning:  Attempt to read property "title" on null in /Users/rupesh/Herd/wordpress/wp-includes/class-wp-customize-widgets.php on line 923
+[11-Mar-2025 06:16:04 UTC] PHP Warning:  Attempt to read property "title" on null in /Users/rupesh/Herd/wordpress/wp-includes/class-wp-customize-widgets.php on line 923
+[11-Mar-2025 06:16:20 UTC] PHP Warning:  Attempt to read property "title" on null in /Users/rupesh/Herd/wordpress/wp-includes/class-wp-customize-widgets.php on line 923
+[11-Mar-2025 06:16:22 UTC] PHP Warning:  Attempt to read property "title" on null in /Users/rupesh/Herd/wordpress/wp-includes/class-wp-customize-widgets.php on line 923
+[11-Mar-2025 06:16:27 UTC] PHP Warning:  Attempt to read property "title" on null in /Users/rupesh/Herd/wordpress/wp-includes/class-wp-customize-widgets.php on line 923
+[11-Mar-2025 06:16:50 UTC] PHP Warning:  Attempt to read property "title" on null in /Users/rupesh/Herd/wordpress/wp-includes/class-wp-customize-widgets.php on line 923
+[11-Mar-2025 06:25:09 UTC] PHP Warning:  Attempt to read property "title" on null in /Users/rupesh/Herd/wordpress/wp-includes/class-wp-customize-widgets.php on line 923
+[11-Mar-2025 06:25:28 UTC] PHP Warning:  Attempt to read property "title" on null in /Users/rupesh/Herd/wordpress/wp-includes/class-wp-customize-widgets.php on line 923
+[11-Mar-2025 06:25:35 UTC] PHP Deprecated:  Function wp_update_https_detection_errors is <strong>deprecated</strong> since version 6.4.0 with no alternative available. in /Users/rupesh/Herd/wordpress/wp-includes/functions.php on line 6114
+[11-Mar-2025 06:44:03 UTC] PHP Warning:  Attempt to read property "title" on null in /Users/rupesh/Herd/wordpress/wp-includes/class-wp-customize-widgets.php on line 923
+[11-Mar-2025 06:44:06 UTC] PHP Warning:  Attempt to read property "title" on null in /Users/rupesh/Herd/wordpress/wp-includes/class-wp-customize-widgets.php on line 923
+[11-Mar-2025 06:46:07 UTC] PHP Warning:  Attempt to read property "title" on null in /Users/rupesh/Herd/wordpress/wp-includes/class-wp-customize-widgets.php on line 923
+[11-Mar-2025 06:46:08 UTC] PHP Warning:  Attempt to read property "title" on null in /Users/rupesh/Herd/wordpress/wp-includes/class-wp-customize-widgets.php on line 923
+[11-Mar-2025 06:46:10 UTC] PHP Warning:  Attempt to read property "title" on null in /Users/rupesh/Herd/wordpress/wp-includes/class-wp-customize-widgets.php on line 923
+[11-Mar-2025 06:50:09 UTC] PHP Warning:  Attempt to read property "title" on null in /Users/rupesh/Herd/wordpress/wp-includes/class-wp-customize-widgets.php on line 923
+[11-Mar-2025 06:50:37 UTC] PHP Warning:  Attempt to read property "title" on null in /Users/rupesh/Herd/wordpress/wp-includes/class-wp-customize-widgets.php on line 923
+[11-Mar-2025 07:25:34 UTC] Automatic updates starting...
+[11-Mar-2025 07:25:37 UTC]   Automatic plugin updates starting...
+[11-Mar-2025 07:25:37 UTC]   Automatic plugin updates complete.
+[11-Mar-2025 07:25:37 UTC]   Automatic theme updates starting...
+[11-Mar-2025 07:25:37 UTC]   Automatic theme updates complete.
+[11-Mar-2025 07:25:37 UTC] Automatic updates complete.

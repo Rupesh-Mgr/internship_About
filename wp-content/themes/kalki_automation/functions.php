@@ -12,7 +12,6 @@
         wp_enqueue_script('custom-carousel-js', get_template_directory_uri() . '/assets/js/script.js', array('swiper-js', 'jquery'), null, true);
         wp_enqueue_script('counter', get_template_directory_uri() . '/assets/js/script.js');
 
-        
     }
     add_action('wp_enqueue_scripts', 'kalki_style');
     add_theme_support( 'post-thumbnails' );

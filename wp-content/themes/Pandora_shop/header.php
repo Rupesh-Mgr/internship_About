@@ -7,6 +7,7 @@
 </head>
 <body>
 <header>
+  
     <div class="container">
 
         <!-- Logo (Positioned Right) -->
@@ -21,19 +22,24 @@
             <div class="menu-items">
                 <?php
                     wp_nav_menu(array(
-                        'theme_location' => 'menu-1',
-                        'items_wrap' => '%3$s', // This removes the default <ul> wrapper
-                        'container' => false
+                        'menu' => 'menu-1',
+                        'menu_class' => 'menu',
                     ));
                 ?>
             </div>
         </nav>
-    <!-- Left Icons (Search, User, Cart) -->
-        <div class="menu-icons">
-            <a href="#" class="icon"><i class="fas fa-search"></i></a>
-            <a href="#" class="icon"><i class="fas fa-user"></i></a>
-            <a href="#" class="icon"><i class="fas fa-shopping-bag"></i></a>
-        </div>
+            <!-- Left Icons (Search, User, Cart) -->
+            <div class="menu-icons">
+                <div class="search-icon">
+                <a href="#" class="icon"><i class="fas fa-search"></i></a>
+                </div>
+                <div class="icon-divider"></div>
+                <div class="user-cart-icons">
+                    <a href="#" class="icon"><i class="fas fa-user"></i></a>
+                    <a href="#" class="icon"><i class="fas fa-cart-shopping"></i></a>
+                </div>
+            </div>
+
     </div>
 </header>
 
